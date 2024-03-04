@@ -2,18 +2,21 @@ import React, { useState } from "react";
 import { Image, StyleSheet, Text, TextInput, TouchableOpacity, View } from "react-native";
 
 function CadastroScreenServico(): JSX.Element {
-
     const [nome, setNome] = useState("");
-    const [duracao, setDuracao] = useState("");
     const [descricao, setDescricao] = useState("");
-    const [preco, setPreco] = useState("");    
+    const [duracao, setDuracao] = useState("");
+    const [preco, setPreco] = useState("");
+
+
 
     function login() {
         const dados = {
             nome: nome,
-            duracao: duracao,
-            descricao: descricao,
-            preco: preco
+            descricao:descricao,
+            duracao:duracao,
+            preco:preco,
+
+
         }
         console.log(dados);
     }
@@ -21,31 +24,30 @@ function CadastroScreenServico(): JSX.Element {
     return (
         <View style={styles.container}>
             <Image style={styles.logo} resizeMode="contain"
-                source={require('../assets/images/Pandora.jpg')}  />
-            
+                source={require('../assets/images/Pandora.jpg')} />
+
             <View style={styles.card}>
-
-            <Text style={styles.title}>Cadastro do serviço</Text>
-
+                <Text style={styles.title}>Cadastro do Serviço</Text>
                 <TextInput style={styles.input} placeholder="Nome:"
                     placeholderTextColor={"#ACA3A9"}
                     onChangeText={(textNome) => setNome(textNome)} />
-                
-                <TextInput style={styles.input} placeholder="Duração:"
-                    placeholderTextColor={"#ACA3A9"}
-                    onChangeText={(textDuracao) => setDuracao(textDuracao)} />
-                
+
                 <TextInput style={styles.input} placeholder="Descrição:"
                     placeholderTextColor={"#ACA3A9"}
                     onChangeText={(textDescricao) => setDescricao(textDescricao)} />
-                
-                <TextInput style={styles.input} placeholder="Preco:"
+
+<TextInput style={styles.input} placeholder="Duração:"
+                    placeholderTextColor={"#ACA3A9"}
+                    onChangeText={(textDuracao) => setDuracao(textDuracao)} />
+
+
+<TextInput style={styles.input} placeholder="Preço:"
                     placeholderTextColor={"#ACA3A9"}
                     onChangeText={(textPreco) => setPreco(textPreco)} />
 
                 <TouchableOpacity style={styles.button}
                     onPress={() => { login() }}>
-                    <Text style={styles.buttonText}>Entrar</Text>
+                    <Text style={styles.buttonText}>Cadastrar</Text>
                 </TouchableOpacity>
 
                 <TouchableOpacity>
@@ -53,7 +55,7 @@ function CadastroScreenServico(): JSX.Element {
                 </TouchableOpacity>
 
                 <TouchableOpacity>
-                    <Text style={styles.forgetPassword}>Não possui conta? Cadastre-se!</Text>
+                    <Text style={styles.forgetPassword}>Já possui uma conta? Faça login!</Text>
                 </TouchableOpacity>
             </View>
         </View>
@@ -66,7 +68,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         backgroundColor: '#ACA3A9'
     },
-    
+
     logo: {
         width: 450,
         height: 350,
@@ -74,7 +76,7 @@ const styles = StyleSheet.create({
         marginTop: -150
     },
     card: {
-        backgroundColor: '#96747E',
+        backgroundColor: '#7C2F3D',
         width: 300,
         borderRadius: 10,
         padding: 20,
@@ -101,7 +103,7 @@ const styles = StyleSheet.create({
         borderColor: '#D4CCC4'
     },
     button: {
-        backgroundColor: '#7C2F3D',
+        backgroundColor: '#5B1824',
         height: 40,
         borderRadius: 8,
 

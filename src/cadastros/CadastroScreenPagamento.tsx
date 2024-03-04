@@ -2,16 +2,19 @@ import React, { useState } from "react";
 import { Image, StyleSheet, Text, TextInput, TouchableOpacity, View } from "react-native";
 
 function CadastroScreenPagamento(): JSX.Element {
-
     const [nome, setNome] = useState("");
     const [taxa, setTaxa] = useState("");
-    const [Status, setStatus] = useState("");
+    const [status, setStatus] = useState("");
+
+
 
     function login() {
         const dados = {
             nome: nome,
-            taxa: taxa,
-            status: Status
+            taxa:taxa,
+            status:status,
+
+
         }
         console.log(dados);
     }
@@ -19,28 +22,25 @@ function CadastroScreenPagamento(): JSX.Element {
     return (
         <View style={styles.container}>
             <Image style={styles.logo} resizeMode="contain"
-                source={require('../assets/images/Pandora.jpg')}  />
-            
+                source={require('../assets/images/Pandora.jpg')} />
+
             <View style={styles.card}>
-
-            <Text style={styles.title}>Cadastro do pagamento</Text>
-
+                <Text style={styles.title}>Cadastro da Forma de Pagamento</Text>
                 <TextInput style={styles.input} placeholder="Nome:"
                     placeholderTextColor={"#ACA3A9"}
                     onChangeText={(textNome) => setNome(textNome)} />
-                
+
                 <TextInput style={styles.input} placeholder="Taxa:"
                     placeholderTextColor={"#ACA3A9"}
                     onChangeText={(textTaxa) => setTaxa(textTaxa)} />
-                
-                <TextInput style={styles.input} placeholder="Status:"
-                    placeholderTextColor={"#ACA3A9"}
-                    onChangeText={(textStatus) => setNome(textStatus)} />
 
+<TextInput style={styles.input} placeholder="Status:"
+                    placeholderTextColor={"#ACA3A9"}
+                    onChangeText={(textStatus) => setStatus(textStatus)} />
 
                 <TouchableOpacity style={styles.button}
                     onPress={() => { login() }}>
-                    <Text style={styles.buttonText}>Entrar</Text>
+                    <Text style={styles.buttonText}>Cadastrar</Text>
                 </TouchableOpacity>
 
                 <TouchableOpacity>
@@ -48,7 +48,7 @@ function CadastroScreenPagamento(): JSX.Element {
                 </TouchableOpacity>
 
                 <TouchableOpacity>
-                    <Text style={styles.forgetPassword}>Não possui conta? Cadastre-se!</Text>
+                    <Text style={styles.forgetPassword}>Já possui uma conta? Faça login!</Text>
                 </TouchableOpacity>
             </View>
         </View>
@@ -61,7 +61,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         backgroundColor: '#ACA3A9'
     },
-    
+
     logo: {
         width: 450,
         height: 350,
@@ -69,7 +69,7 @@ const styles = StyleSheet.create({
         marginTop: -150
     },
     card: {
-        backgroundColor: '#96747E',
+        backgroundColor: '#7C2F3D',
         width: 300,
         borderRadius: 10,
         padding: 20,
@@ -96,7 +96,7 @@ const styles = StyleSheet.create({
         borderColor: '#D4CCC4'
     },
     button: {
-        backgroundColor: '#7C2F3D',
+        backgroundColor: '#5B1824',
         height: 40,
         borderRadius: 8,
 

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Image, StyleSheet, Text, TextInput, TouchableOpacity, View } from "react-native";
 
-function LoginScreenAdministrador(): JSX.Element {
+function LoginScreenADM(): JSX.Element {
 
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
@@ -21,7 +21,7 @@ function LoginScreenAdministrador(): JSX.Element {
             
             <View style={styles.card}>
 
-            <Text style={styles.title}>Login do administrador</Text>
+            <Text style={styles.title}>Login dos Adms</Text>
                 <TextInput style={styles.input} placeholder="E-mail:"
                     placeholderTextColor={"#ACA3A9"}
                     onChangeText={(textEmail) => setEmail(textEmail)} />
@@ -108,4 +108,4 @@ const styles = StyleSheet.create({
     }
 
 });
-export default LoginScreenAdministrador;
+export default LoginScreenADM;

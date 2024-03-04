@@ -21,7 +21,7 @@ function LoginScreenProfissional(): JSX.Element {
             
             <View style={styles.card}>
 
-            <Text style={styles.title}>Login do profissional</Text>
+            <Text style={styles.title}>Login do Profissional</Text>
                 <TextInput style={styles.input} placeholder="E-mail:"
                     placeholderTextColor={"#ACA3A9"}
                     onChangeText={(textEmail) => setEmail(textEmail)} />
